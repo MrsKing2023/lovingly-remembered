@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lovingly Remembered — A place to keep their memory</title>
+<meta name="description" content="We build beautiful, lasting tribute websites so your loved one's story doesn't disappear. A place for photos, memories, and the people who loved them.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #F9F7F4;
+    --bg-soft: #F2EEE8;
+    --bg-card: #FFFFFF;
+    --text-primary: #2C2825;
+    --text-secondary: #7A7066;
+    --text-light: #A89F96;
+    --accent: #7D9E8C;
+    --accent-soft: rgba(125, 158, 140, 0.12);
+    --rose: #C4917A;
+    --rose-soft: rgba(196, 145, 122, 0.10);
+    --border: rgba(44, 40, 37, 0.08);
+    --font-serif: 'Lora', Georgia, serif;
+    --font-sans: 'Inter', sans-serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: inherit; text-decoration: none; }
+
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 28px;
+  }
+
+  /* ---------- Nav ---------- */
+  header {
+    padding: 24px 0;
+    border-bottom: 1px solid var(--border);
+    background: var(--bg);
+  }
+
+  nav {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    font-family: var(--font-serif);
+    font-size: 1.15rem;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    color: var(--text-primary);
+  }
+
+  .logo em {
+    font-style: italic;
+    color: var(--rose);
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 32px;
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+  }
+
+  .nav-links a:hover { color: var(--text-primary); }
+
+  .nav-cta {
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 8px 20px;
+    border-radius: 40px;
+    transition: background 0.2s, color 0.2s;
+  }
+
+  .nav-cta:hover {
+    background: var(--accent);
+    color: white;
+  }
+
+  @media (max-width: 640px) {
+    .nav-links { display: none; }
+  }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    padding: 90px 0 80px;
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .hero .kicker {
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-light);
+    margin-bottom: 24px;
+    display: block;
+  }
+
+  .hero h1 {
+    font-family: var(--font-serif);
+    font-size: clamp(2.2rem, 5vw, 3.4rem);
+    font-weight: 500;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin-bottom: 24px;
+    color: var(--text-primary);
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    color: var(--rose);
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    max-width: 560px;
+    margin: 0 auto 36px;
+  }
+
+  .hero-actions {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    background: var(--accent);
+    color: white;
+    padding: 14px 30px;
+    border-radius: 40px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: opacity 0.2s, transform 0.2s;
+    display: inline-block;
+  }
+
+  .btn-primary:hover { opacity: 0.88; transform: translateY(-1px); }
+
+  .btn-ghost {
+    color: var(--text-secondary);
+    padding: 14px 24px;
+    border-radius: 40px;
+    font-size: 0.95rem;
+    border: 1px solid var(--border);
+    transition: border-color 0.2s, color 0.2s;
+    display: inline-block;
+  }
+
+  .btn-ghost:hover { border-color: var(--text-secondary); color: var(--text-primary); }
+
+  /* ---------- Divider ---------- */
+  .divider {
+    text-align: center;
+    padding: 0 0 70px;
+    color: var(--text-light);
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 1.4rem;
+    letter-spacing: 0.15em;
+  }
+
+  /* ---------- What it is ---------- */
+  .what-section {
+    background: var(--bg-soft);
+    padding: 80px 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .what-inner {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 28px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+
+  @media (max-width: 720px) {
+    .what-inner { grid-template-columns: 1fr; gap: 36px; }
+  }
+
+  .what-text h2 {
+    font-family: var(--font-serif);
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-weight: 500;
+    line-height: 1.25;
+    margin-bottom: 20px;
+  }
+
+  .what-text h2 em { font-style: italic; color: var(--rose); }
+
+  .what-text p {
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+    font-size: 0.97rem;
+  }
+
+  .what-text p:last-child { margin-bottom: 0; }
+
+  /* Sample tribute card */
+  .tribute-preview {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px -16px rgba(44, 40, 37, 0.14);
+  }
+
+  .tribute-preview-top {
+    background: linear-gradient(135deg, #D4C5B8, #C9B8AE);
+    height: 120px;
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+  }
+
+  .tribute-avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.5);
+    border: 3px solid white;
+    transform: translateY(28px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-serif);
+    font-size: 1.4rem;
+    color: #8B7D74;
+  }
+
+  .tribute-preview-body {
+    padding: 36px 24px 24px;
+  }
+
+  .tribute-preview-body h3 {
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+
+  .tribute-preview-body .dates {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    margin-bottom: 14px;
+  }
+
+  .tribute-preview-body p {
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    font-style: italic;
+    border-left: 2px solid var(--rose);
+    padding-left: 12px;
+    margin-bottom: 16px;
+  }
+
+  .tribute-tags {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+
+  .tribute-tag {
+    font-size: 0.72rem;
+    padding: 4px 10px;
+    border-radius: 20px;
+    background: var(--bg-soft);
+    color: var(--text-secondary);
+  }
+
+  /* ---------- How it works ---------- */
+  .how-section { padding: 90px 0; }
+
+  .section-label {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-light);
+    margin-bottom: 14px;
+    display: block;
+  }
+
+  .how-section h2 {
+    font-family: var(--font-serif);
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-weight: 500;
+    margin-bottom: 56px;
+    max-width: 480px;
+  }
+
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+
+  @media (max-width: 720px) {
+    .steps { grid-template-columns: 1fr; gap: 24px; }
+  }
+
+  .step {
+    position: relative;
+  }
+
+  .step-num {
+    font-family: var(--font-serif);
+    font-size: 2.8rem;
+    font-weight: 400;
+    color: var(--border);
+    line-height: 1;
+    margin-bottom: 16px;
+    color: rgba(44, 40, 37, 0.08);
+  }
+
+  .step h3 {
+    font-family: var(--font-serif);
+    font-size: 1.15rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+
+  .step p {
+    font-size: 0.92rem;
+    color: var(--text-secondary);
+  }
+
+  /* ---------- Example ---------- */
+  .example-section {
+    background: var(--bg-soft);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 90px 0;
+  }
+
+  .example-inner {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 28px;
+  }
+
+  .example-inner h2 {
+    font-family: var(--font-serif);
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-weight: 500;
+    margin-bottom: 14px;
+  }
+
+  .example-inner > p {
+    color: var(--text-secondary);
+    max-width: 580px;
+    margin-bottom: 40px;
+    font-size: 0.97rem;
+  }
+
+  .example-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px -16px rgba(44, 40, 37, 0.14);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 280px;
+  }
+
+  @media (max-width: 720px) {
+    .example-card { grid-template-columns: 1fr; }
+  }
+
+  .example-card-left {
+    background: linear-gradient(160deg, #C9B8AE 0%, #B5A399 100%);
+    padding: 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  .example-card-left h3 {
+    font-family: var(--font-serif);
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: white;
+    margin-bottom: 6px;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.15);
+  }
+
+  .example-card-left p {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.75);
+  }
+
+  .example-card-right {
+    padding: 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .example-card-right p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    font-style: italic;
+    margin-bottom: 24px;
+  }
+
+  .example-features {
+    list-style: none;
+    margin-bottom: 28px;
+  }
+
+  .example-features li {
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .example-features li::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+    flex-shrink: 0;
+  }
+
+  .example-link {
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--accent);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: gap 0.2s;
+  }
+
+  .example-link:hover { gap: 10px; }
+
+  /* ---------- Partners section ---------- */
+  .partners-section { padding: 90px 0; }
+
+  .partners-section h2 {
+    font-family: var(--font-serif);
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-weight: 500;
+    margin-bottom: 14px;
+    max-width: 540px;
+  }
+
+  .partners-section > .container > p {
+    color: var(--text-secondary);
+    max-width: 580px;
+    margin-bottom: 40px;
+    font-size: 0.97rem;
+  }
+
+  .partner-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  @media (max-width: 720px) {
+    .partner-cards { grid-template-columns: 1fr; }
+  }
+
+  .partner-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 28px;
+    transition: border-color 0.2s;
+  }
+
+  .partner-card:hover { border-color: var(--accent); }
+
+  .partner-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: var(--accent-soft);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    font-size: 1rem;
+  }
+
+  .partner-card h3 {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+
+  .partner-card p {
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+  }
+
+  /* ---------- Contact ---------- */
+  .contact-section {
+    background: var(--bg-soft);
+    border-top: 1px solid var(--border);
+    padding: 90px 0;
+    text-align: center;
+  }
+
+  .contact-inner {
+    max-width: 580px;
+    margin: 0 auto;
+    padding: 0 28px;
+  }
+
+  .contact-inner h2 {
+    font-family: var(--font-serif);
+    font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 18px;
+  }
+
+  .contact-inner h2 em { font-style: italic; color: var(--rose); }
+
+  .contact-inner p {
+    color: var(--text-secondary);
+    margin-bottom: 36px;
+    font-size: 0.97rem;
+  }
+
+  .contact-actions {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+  }
+
+  .contact-note {
+    font-size: 0.82rem;
+    color: var(--text-light);
+    font-style: italic;
+  }
+
+  /* ---------- Footer ---------- */
+  footer {
+    padding: 32px 28px;
+    text-align: center;
+    font-size: 0.82rem;
+    color: var(--text-light);
+    border-top: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 960px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .footer-logo {
+    font-family: var(--font-serif);
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+  }
+
+  .footer-logo em { font-style: italic; color: var(--rose); }
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { transition: none !important; }
+  }
+
+  a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="logo"><em>Lovingly</em> Remembered</div>
+    <div class="nav-links">
+      <a href="#how">How it works</a>
+      <a href="#example">See an example</a>
+      <a href="#partners">For funeral homes</a>
+    </div>
+    <a href="#contact" class="nav-cta">Get started</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <div class="container">
+    <div class="hero">
+      <span class="kicker">A place to keep their memory</span>
+      <h1>Their story deserves more than a <em>social media post.</em></h1>
+      <p>We build beautiful, lasting tribute websites for families who've lost someone — a dedicated place to share photos, write memories, and let others who loved them do the same.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn-primary">Tell us about them</a>
+        <a href="#example" class="btn-ghost">See an example</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider">· · ·</div>
+
+  <!-- WHAT IT IS -->
+  <section class="what-section">
+    <div class="what-inner">
+      <div class="what-text">
+        <h2>A permanent home for <em>their</em> memory</h2>
+        <p>Social media moves on. Obituaries get buried. Group chats go quiet. A tribute website stays — and it's yours to shape exactly the way you want.</p>
+        <p>We handle all the technical work, so your family can focus on what matters: sharing stories, gathering photos, and giving people a place to visit for years to come.</p>
+        <p>Each site includes a photo gallery, a written tribute, and a guestbook where friends and family can leave messages. Custom-built, with a real web address you can share.</p>
+      </div>
+
+      <div class="tribute-preview">
+        <div class="tribute-preview-top">
+          <div class="tribute-avatar">S</div>
+        </div>
+        <div class="tribute-preview-body">
+          <h3>Susan M. King</h3>
+          <div class="dates">1952 — 2025 &nbsp;·&nbsp; Beloved mother &amp; grandmother</div>
+          <p>"She had a way of making everyone feel like they were the most important person in the room."</p>
+          <div class="tribute-tags">
+            <span class="tribute-tag">📷 Gallery</span>
+            <span class="tribute-tag">✍️ Guestbook</span>
+            <span class="tribute-tag">🌿 Share memories</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how-section" id="how">
+    <div class="container">
+      <span class="section-label">The process</span>
+      <h2>Simple from your first message to their finished site.</h2>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">01</div>
+          <h3>You reach out</h3>
+          <p>Tell us a little about your loved one — their name, a few memories, and any photos you'd like to share. There's no rush, and no wrong way to start.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">02</div>
+          <h3>We build it together</h3>
+          <p>We handle the design, development, and setup. You review it and tell us what to adjust. Most sites are ready within a week.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">03</div>
+          <h3>Share it with everyone who loved them</h3>
+          <p>Your site goes live with its own web address. Friends and family can visit, leave messages, and come back whenever they want to remember.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXAMPLE -->
+  <section class="example-section" id="example">
+    <div class="example-inner">
+      <span class="section-label">A real tribute site</span>
+      <h2>See what's possible</h2>
+      <p>This is rememberingsusan.com — a tribute site built for a real family. It's the same care and craft we bring to every site we build.</p>
+
+      <div class="example-card">
+        <div class="example-card-left">
+          <h3>Remembering Susan</h3>
+          <p>A tribute site for a beloved family member</p>
+        </div>
+        <div class="example-card-right">
+          <div>
+            <p>"A place her family can return to — with her photos, her story, and the words of the people who loved her."</p>
+            <ul class="example-features">
+              <li>Photo gallery with family memories</li>
+              <li>Written tribute and life story</li>
+              <li>Guestbook for friends and family</li>
+              <li>Custom domain, mobile-friendly</li>
+              <li>Secure and always accessible</li>
+            </ul>
+          </div>
+          <a href="https://rememberingsusan.com" target="_blank" rel="noopener" class="example-link">Visit rememberingsusan.com →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARTNERS -->
+  <section class="partners-section" id="partners">
+    <div class="container">
+      <span class="section-label">For grief professionals</span>
+      <h2>A thoughtful resource for the families you serve</h2>
+      <p>We work with funeral homes, hospice organizations, and grief counselors who want to offer families something lasting — beyond the service itself.</p>
+
+      <div class="partner-cards">
+        <div class="partner-card">
+          <div class="partner-icon">🌿</div>
+          <h3>Funeral Homes</h3>
+          <p>Offer tribute websites as an additional service to grieving families — a meaningful extension of the care you already provide.</p>
+        </div>
+        <div class="partner-card">
+          <div class="partner-icon">🤝</div>
+          <h3>Hospice &amp; Grief Counselors</h3>
+          <p>Give your clients a place to direct their grief into something permanent and beautiful — a site that becomes a gathering place for loved ones.</p>
+        </div>
+        <div class="partner-card">
+          <div class="partner-icon">✉️</div>
+          <h3>Estate Attorneys</h3>
+          <p>Help families preserve a loved one's story alongside their estate — a digital legacy that's separate from the legal process, but just as meaningful.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact-section" id="contact">
+    <div class="contact-inner">
+      <h2>Ready to create something <em>lasting?</em></h2>
+      <p>Whether you lost someone recently or want to build a tribute for someone you've been missing for years — we'd love to help. Reach out and we'll take it from there, at whatever pace feels right for you.</p>
+      <div class="contact-actions">
+        <a href="mailto:hello.lovinglyremembered@gmail.com" class="btn-primary">Send us a message</a>
+      </div>
+      <p class="contact-note">No pressure, no forms. Just a conversation.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-logo"><em>Lovingly</em> Remembered</div>
+  <div>&copy; 2026 Lovingly Remembered. Built with care.</div>
+</footer>
+
+</body>
+</html>
