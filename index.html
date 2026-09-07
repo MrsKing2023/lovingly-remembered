@@ -68,10 +68,7 @@
     color: var(--text-primary);
   }
 
-  .logo em {
-    font-style: italic;
-    color: var(--rose);
-  }
+  .logo em { font-style: italic; color: var(--rose); }
 
   .nav-links {
     display: flex;
@@ -92,14 +89,9 @@
     transition: background 0.2s, color 0.2s;
   }
 
-  .nav-cta:hover {
-    background: var(--accent);
-    color: white;
-  }
+  .nav-cta:hover { background: var(--accent); color: white; }
 
-  @media (max-width: 640px) {
-    .nav-links { display: none; }
-  }
+  @media (max-width: 640px) { .nav-links { display: none; } }
 
   /* ---------- Hero ---------- */
   .hero {
@@ -129,10 +121,7 @@
     color: var(--text-primary);
   }
 
-  .hero h1 em {
-    font-style: italic;
-    color: var(--rose);
-  }
+  .hero h1 em { font-style: italic; color: var(--rose); }
 
   .hero p {
     font-size: 1.1rem;
@@ -157,6 +146,8 @@
     font-weight: 500;
     transition: opacity 0.2s, transform 0.2s;
     display: inline-block;
+    cursor: pointer;
+    border: none;
   }
 
   .btn-primary:hover { opacity: 0.88; transform: translateY(-1px); }
@@ -202,9 +193,7 @@
     align-items: center;
   }
 
-  @media (max-width: 720px) {
-    .what-inner { grid-template-columns: 1fr; gap: 36px; }
-  }
+  @media (max-width: 720px) { .what-inner { grid-template-columns: 1fr; gap: 36px; } }
 
   .what-text h2 {
     font-family: var(--font-serif);
@@ -216,15 +205,9 @@
 
   .what-text h2 em { font-style: italic; color: var(--rose); }
 
-  .what-text p {
-    color: var(--text-secondary);
-    margin-bottom: 16px;
-    font-size: 0.97rem;
-  }
-
+  .what-text p { color: var(--text-secondary); margin-bottom: 16px; font-size: 0.97rem; }
   .what-text p:last-child { margin-bottom: 0; }
 
-  /* Sample tribute card */
   .tribute-preview {
     background: var(--bg-card);
     border: 1px solid var(--border);
@@ -256,9 +239,7 @@
     color: #8B7D74;
   }
 
-  .tribute-preview-body {
-    padding: 36px 24px 24px;
-  }
+  .tribute-preview-body { padding: 36px 24px 24px; }
 
   .tribute-preview-body h3 {
     font-family: var(--font-serif);
@@ -267,11 +248,7 @@
     margin-bottom: 4px;
   }
 
-  .tribute-preview-body .dates {
-    font-size: 0.8rem;
-    color: var(--text-light);
-    margin-bottom: 14px;
-  }
+  .tribute-preview-body .dates { font-size: 0.8rem; color: var(--text-light); margin-bottom: 14px; }
 
   .tribute-preview-body p {
     font-size: 0.88rem;
@@ -282,11 +259,7 @@
     margin-bottom: 16px;
   }
 
-  .tribute-tags {
-    display: flex;
-    gap: 6px;
-    flex-wrap: wrap;
-  }
+  .tribute-tags { display: flex; gap: 6px; flex-wrap: wrap; }
 
   .tribute-tag {
     font-size: 0.72rem;
@@ -316,41 +289,23 @@
     max-width: 480px;
   }
 
-  .steps {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 32px;
-  }
+  .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
 
-  @media (max-width: 720px) {
-    .steps { grid-template-columns: 1fr; gap: 24px; }
-  }
+  @media (max-width: 720px) { .steps { grid-template-columns: 1fr; gap: 24px; } }
 
-  .step {
-    position: relative;
-  }
+  .step { position: relative; }
 
   .step-num {
     font-family: var(--font-serif);
     font-size: 2.8rem;
     font-weight: 400;
-    color: var(--border);
     line-height: 1;
     margin-bottom: 16px;
     color: rgba(44, 40, 37, 0.08);
   }
 
-  .step h3 {
-    font-family: var(--font-serif);
-    font-size: 1.15rem;
-    font-weight: 500;
-    margin-bottom: 10px;
-  }
-
-  .step p {
-    font-size: 0.92rem;
-    color: var(--text-secondary);
-  }
+  .step h3 { font-family: var(--font-serif); font-size: 1.15rem; font-weight: 500; margin-bottom: 10px; }
+  .step p { font-size: 0.92rem; color: var(--text-secondary); }
 
   /* ---------- Example ---------- */
   .example-section {
@@ -360,11 +315,7 @@
     padding: 90px 0;
   }
 
-  .example-inner {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 0 28px;
-  }
+  .example-inner { max-width: 960px; margin: 0 auto; padding: 0 28px; }
 
   .example-inner h2 {
     font-family: var(--font-serif);
@@ -373,12 +324,7 @@
     margin-bottom: 14px;
   }
 
-  .example-inner > p {
-    color: var(--text-secondary);
-    max-width: 580px;
-    margin-bottom: 40px;
-    font-size: 0.97rem;
-  }
+  .example-inner > p { color: var(--text-secondary); max-width: 580px; margin-bottom: 40px; font-size: 0.97rem; }
 
   .example-card {
     background: var(--bg-card);
@@ -391,9 +337,7 @@
     min-height: 280px;
   }
 
-  @media (max-width: 720px) {
-    .example-card { grid-template-columns: 1fr; }
-  }
+  @media (max-width: 720px) { .example-card { grid-template-columns: 1fr; } }
 
   .example-card-left {
     background: linear-gradient(160deg, #C9B8AE 0%, #B5A399 100%);
@@ -412,29 +356,12 @@
     text-shadow: 0 1px 4px rgba(0,0,0,0.15);
   }
 
-  .example-card-left p {
-    font-size: 0.85rem;
-    color: rgba(255,255,255,0.75);
-  }
+  .example-card-left p { font-size: 0.85rem; color: rgba(255,255,255,0.75); }
 
-  .example-card-right {
-    padding: 36px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
+  .example-card-right { padding: 36px; display: flex; flex-direction: column; justify-content: space-between; }
+  .example-card-right p { font-size: 0.95rem; color: var(--text-secondary); font-style: italic; margin-bottom: 24px; }
 
-  .example-card-right p {
-    font-size: 0.95rem;
-    color: var(--text-secondary);
-    font-style: italic;
-    margin-bottom: 24px;
-  }
-
-  .example-features {
-    list-style: none;
-    margin-bottom: 28px;
-  }
+  .example-features { list-style: none; margin-bottom: 28px; }
 
   .example-features li {
     font-size: 0.88rem;
@@ -466,7 +393,7 @@
 
   .example-link:hover { gap: 10px; }
 
-  /* ---------- Partners section ---------- */
+  /* ---------- Partners ---------- */
   .partners-section { padding: 90px 0; }
 
   .partners-section h2 {
@@ -477,22 +404,11 @@
     max-width: 540px;
   }
 
-  .partners-section > .container > p {
-    color: var(--text-secondary);
-    max-width: 580px;
-    margin-bottom: 40px;
-    font-size: 0.97rem;
-  }
+  .partners-section > .container > p { color: var(--text-secondary); max-width: 580px; margin-bottom: 40px; font-size: 0.97rem; }
 
-  .partner-cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-  }
+  .partner-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 
-  @media (max-width: 720px) {
-    .partner-cards { grid-template-columns: 1fr; }
-  }
+  @media (max-width: 720px) { .partner-cards { grid-template-columns: 1fr; } }
 
   .partner-card {
     background: var(--bg-card);
@@ -516,17 +432,8 @@
     font-size: 1rem;
   }
 
-  .partner-card h3 {
-    font-family: var(--font-serif);
-    font-size: 1.05rem;
-    font-weight: 500;
-    margin-bottom: 8px;
-  }
-
-  .partner-card p {
-    font-size: 0.88rem;
-    color: var(--text-secondary);
-  }
+  .partner-card h3 { font-family: var(--font-serif); font-size: 1.05rem; font-weight: 500; margin-bottom: 8px; }
+  .partner-card p { font-size: 0.88rem; color: var(--text-secondary); }
 
   /* ---------- Contact ---------- */
   .contact-section {
@@ -536,11 +443,7 @@
     text-align: center;
   }
 
-  .contact-inner {
-    max-width: 580px;
-    margin: 0 auto;
-    padding: 0 28px;
-  }
+  .contact-inner { max-width: 580px; margin: 0 auto; padding: 0 28px; }
 
   .contact-inner h2 {
     font-family: var(--font-serif);
@@ -551,25 +454,53 @@
   }
 
   .contact-inner h2 em { font-style: italic; color: var(--rose); }
+  .contact-inner > p { color: var(--text-secondary); margin-bottom: 36px; font-size: 0.97rem; }
 
-  .contact-inner p {
-    color: var(--text-secondary);
-    margin-bottom: 36px;
-    font-size: 0.97rem;
+  .contact-form { text-align: left; display: flex; flex-direction: column; gap: 16px; margin-bottom: 24px; }
+
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  @media (max-width: 560px) { .form-row { grid-template-columns: 1fr; } }
+
+  .form-field { display: flex; flex-direction: column; gap: 6px; }
+
+  .form-field label { font-size: 0.82rem; color: var(--text-secondary); font-weight: 500; letter-spacing: 0.02em; }
+
+  .form-field input,
+  .form-field textarea {
+    background: var(--bg-card);
+    border: 1px solid rgba(44, 40, 37, 0.15);
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    transition: border-color 0.2s;
+    width: 100%;
+    resize: none;
   }
 
-  .contact-actions {
-    display: flex;
-    justify-content: center;
-    gap: 16px;
-    flex-wrap: wrap;
-    margin-bottom: 32px;
-  }
+  .form-field input:focus,
+  .form-field textarea:focus { outline: none; border-color: var(--accent); }
 
-  .contact-note {
-    font-size: 0.82rem;
-    color: var(--text-light);
-    font-style: italic;
+  .form-field input::placeholder,
+  .form-field textarea::placeholder { color: var(--text-light); }
+
+  .form-submit { width: 100%; padding: 14px; font-size: 0.97rem; }
+
+  .contact-note { font-size: 0.82rem; color: var(--text-light); font-style: italic; text-align: center; }
+
+  .form-success {
+    display: none;
+    background: rgba(125, 158, 140, 0.12);
+    border: 1px solid var(--accent);
+    border-radius: 10px;
+    padding: 24px;
+    text-align: center;
+    color: var(--accent);
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    margin-bottom: 24px;
   }
 
   /* ---------- Footer ---------- */
@@ -588,24 +519,15 @@
     gap: 8px;
   }
 
-  .footer-logo {
-    font-family: var(--font-serif);
-    font-size: 0.95rem;
-    color: var(--text-secondary);
-  }
-
+  .footer-logo { font-family: var(--font-serif); font-size: 0.95rem; color: var(--text-secondary); }
   .footer-logo em { font-style: italic; color: var(--rose); }
 
-  /* Reduced motion */
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
     * { transition: none !important; }
   }
 
-  a:focus-visible {
-    outline: 2px solid var(--accent);
-    outline-offset: 2px;
-  }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 </style>
 </head>
 <body>
@@ -648,7 +570,6 @@
         <p>We handle all the technical work, so your family can focus on what matters: sharing stories, gathering photos, and giving people a place to visit for years to come.</p>
         <p>Each site includes a photo gallery, a written tribute, and a guestbook where friends and family can leave messages. Custom-built, with a real web address you can share.</p>
       </div>
-
       <div class="tribute-preview">
         <div class="tribute-preview-top">
           <div class="tribute-avatar">S</div>
@@ -672,7 +593,6 @@
     <div class="container">
       <span class="section-label">The process</span>
       <h2>Simple from your first message to their finished site.</h2>
-
       <div class="steps">
         <div class="step">
           <div class="step-num">01</div>
@@ -699,7 +619,6 @@
       <span class="section-label">A real tribute site</span>
       <h2>See what's possible</h2>
       <p>This is rememberingsusan.com — a tribute site built for a real family. It's the same care and craft we bring to every site we build.</p>
-
       <div class="example-card">
         <div class="example-card-left">
           <h3>Remembering Susan</h3>
@@ -728,7 +647,6 @@
       <span class="section-label">For grief professionals</span>
       <h2>A thoughtful resource for the families you serve</h2>
       <p>We work with funeral homes, hospice organizations, and grief counselors who want to offer families something lasting — beyond the service itself.</p>
-
       <div class="partner-cards">
         <div class="partner-card">
           <div class="partner-icon">🌿</div>
@@ -754,10 +672,34 @@
     <div class="contact-inner">
       <h2>Ready to create something <em>lasting?</em></h2>
       <p>Whether you lost someone recently or want to build a tribute for someone you've been missing for years — we'd love to help. Reach out and we'll take it from there, at whatever pace feels right for you.</p>
-      <div class="contact-actions">
-        <a href="mailto:hello.lovinglyremembered@gmail.com" class="btn-primary">Send us a message</a>
+
+      <div class="form-success" id="formSuccess">
+        Thank you — we'll be in touch soon. 🌿
       </div>
-      <p class="contact-note">No pressure, no forms. Just a conversation.</p>
+
+      <div class="contact-form" id="contactForm">
+        <div class="form-row">
+          <div class="form-field">
+            <label for="name">Your name</label>
+            <input type="text" id="name" placeholder="Jane Smith" autocomplete="name" />
+          </div>
+          <div class="form-field">
+            <label for="email">Your email</label>
+            <input type="email" id="email" placeholder="jane@email.com" autocomplete="email" />
+          </div>
+        </div>
+        <div class="form-field">
+          <label for="lovedone">Who would you like to honor?</label>
+          <input type="text" id="lovedone" placeholder="Their name, and a little about them if you'd like" />
+        </div>
+        <div class="form-field">
+          <label for="message">Anything else you'd like to share?</label>
+          <textarea id="message" rows="4" placeholder="No pressure — just share whatever feels right."></textarea>
+        </div>
+        <button class="btn-primary form-submit" onclick="submitForm()">Send us a message</button>
+      </div>
+
+      <p class="contact-note">No pressure, no rush. Just a conversation.</p>
     </div>
   </section>
 
@@ -767,6 +709,35 @@
   <div class="footer-logo"><em>Lovingly</em> Remembered</div>
   <div>&copy; 2026 Lovingly Remembered. Built with care.</div>
 </footer>
+
+<script>
+  function submitForm() {
+    const name     = document.getElementById('name').value.trim();
+    const email    = document.getElementById('email').value.trim();
+    const lovedone = document.getElementById('lovedone').value.trim();
+    const message  = document.getElementById('message').value.trim();
+
+    if (!name || !email) {
+      alert('Please enter your name and email so we can reach you.');
+      return;
+    }
+
+    const subject = encodeURIComponent('Tribute site inquiry — ' + (lovedone || 'a loved one'));
+    const body    = encodeURIComponent(
+      'Name: ' + name + '\n' +
+      'Email: ' + email + '\n\n' +
+      'Who they would like to honor:\n' + (lovedone || '(not specified)') + '\n\n' +
+      'Message:\n' + (message || '(none)')
+    );
+
+    window.location.href = 'mailto:hello.lovinglyremembered@gmail.com?subject=' + subject + '&body=' + body;
+
+    setTimeout(function() {
+      document.getElementById('contactForm').style.display = 'none';
+      document.getElementById('formSuccess').style.display = 'block';
+    }, 800);
+  }
+</script>
 
 </body>
 </html>
