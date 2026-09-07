@@ -60,23 +60,10 @@
     justify-content: space-between;
   }
 
-  .logo {
-    font-family: var(--font-serif);
-    font-size: 1.15rem;
-    font-weight: 500;
-    letter-spacing: -0.01em;
-    color: var(--text-primary);
-  }
-
+  .logo { font-family: var(--font-serif); font-size: 1.15rem; font-weight: 500; letter-spacing: -0.01em; color: var(--text-primary); }
   .logo em { font-style: italic; color: var(--rose); }
 
-  .nav-links {
-    display: flex;
-    gap: 32px;
-    font-size: 0.88rem;
-    color: var(--text-secondary);
-  }
-
+  .nav-links { display: flex; gap: 32px; font-size: 0.88rem; color: var(--text-secondary); }
   .nav-links a:hover { color: var(--text-primary); }
 
   .nav-cta {
@@ -88,18 +75,12 @@
     border-radius: 40px;
     transition: background 0.2s, color 0.2s;
   }
-
   .nav-cta:hover { background: var(--accent); color: white; }
 
   @media (max-width: 640px) { .nav-links { display: none; } }
 
   /* ---------- Hero ---------- */
-  .hero {
-    padding: 90px 0 80px;
-    text-align: center;
-    max-width: 720px;
-    margin: 0 auto;
-  }
+  .hero { padding: 90px 0 80px; text-align: center; max-width: 720px; margin: 0 auto; }
 
   .hero .kicker {
     font-family: var(--font-sans);
@@ -120,22 +101,11 @@
     margin-bottom: 24px;
     color: var(--text-primary);
   }
-
   .hero h1 em { font-style: italic; color: var(--rose); }
 
-  .hero p {
-    font-size: 1.1rem;
-    color: var(--text-secondary);
-    max-width: 560px;
-    margin: 0 auto 36px;
-  }
+  .hero p { font-size: 1.1rem; color: var(--text-secondary); max-width: 560px; margin: 0 auto 36px; }
 
-  .hero-actions {
-    display: flex;
-    justify-content: center;
-    gap: 16px;
-    flex-wrap: wrap;
-  }
+  .hero-actions { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
 
   .btn-primary {
     background: var(--accent);
@@ -148,8 +118,8 @@
     display: inline-block;
     cursor: pointer;
     border: none;
+    font-family: var(--font-sans);
   }
-
   .btn-primary:hover { opacity: 0.88; transform: translateY(-1px); }
 
   .btn-ghost {
@@ -161,7 +131,6 @@
     transition: border-color 0.2s, color 0.2s;
     display: inline-block;
   }
-
   .btn-ghost:hover { border-color: var(--text-secondary); color: var(--text-primary); }
 
   /* ---------- Divider ---------- */
@@ -176,12 +145,7 @@
   }
 
   /* ---------- What it is ---------- */
-  .what-section {
-    background: var(--bg-soft);
-    padding: 80px 0;
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
-  }
+  .what-section { background: var(--bg-soft); padding: 80px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
 
   .what-inner {
     max-width: 960px;
@@ -192,278 +156,99 @@
     gap: 60px;
     align-items: center;
   }
-
   @media (max-width: 720px) { .what-inner { grid-template-columns: 1fr; gap: 36px; } }
 
-  .what-text h2 {
-    font-family: var(--font-serif);
-    font-size: clamp(1.6rem, 3vw, 2.2rem);
-    font-weight: 500;
-    line-height: 1.25;
-    margin-bottom: 20px;
-  }
-
+  .what-text h2 { font-family: var(--font-serif); font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 500; line-height: 1.25; margin-bottom: 20px; }
   .what-text h2 em { font-style: italic; color: var(--rose); }
-
   .what-text p { color: var(--text-secondary); margin-bottom: 16px; font-size: 0.97rem; }
   .what-text p:last-child { margin-bottom: 0; }
 
-  .tribute-preview {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 8px 32px -16px rgba(44, 40, 37, 0.14);
-  }
+  .tribute-preview { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; box-shadow: 0 8px 32px -16px rgba(44, 40, 37, 0.14); }
 
-  .tribute-preview-top {
-    background: linear-gradient(135deg, #D4C5B8, #C9B8AE);
-    height: 120px;
-    display: flex;
-    align-items: flex-end;
-    padding: 20px;
-  }
+  .tribute-preview-top { background: linear-gradient(135deg, #D4C5B8, #C9B8AE); height: 120px; display: flex; align-items: flex-end; padding: 20px; }
 
   .tribute-avatar {
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.5);
-    border: 3px solid white;
-    transform: translateY(28px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: var(--font-serif);
-    font-size: 1.4rem;
-    color: #8B7D74;
+    width: 56px; height: 56px; border-radius: 50%;
+    background: rgba(255,255,255,0.5); border: 3px solid white;
+    transform: translateY(28px); display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-serif); font-size: 1.4rem; color: #8B7D74;
   }
 
   .tribute-preview-body { padding: 36px 24px 24px; }
-
-  .tribute-preview-body h3 {
-    font-family: var(--font-serif);
-    font-size: 1.2rem;
-    font-weight: 500;
-    margin-bottom: 4px;
-  }
-
+  .tribute-preview-body h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 500; margin-bottom: 4px; }
   .tribute-preview-body .dates { font-size: 0.8rem; color: var(--text-light); margin-bottom: 14px; }
-
-  .tribute-preview-body p {
-    font-size: 0.88rem;
-    color: var(--text-secondary);
-    font-style: italic;
-    border-left: 2px solid var(--rose);
-    padding-left: 12px;
-    margin-bottom: 16px;
-  }
+  .tribute-preview-body p { font-size: 0.88rem; color: var(--text-secondary); font-style: italic; border-left: 2px solid var(--rose); padding-left: 12px; margin-bottom: 16px; }
 
   .tribute-tags { display: flex; gap: 6px; flex-wrap: wrap; }
-
-  .tribute-tag {
-    font-size: 0.72rem;
-    padding: 4px 10px;
-    border-radius: 20px;
-    background: var(--bg-soft);
-    color: var(--text-secondary);
-  }
+  .tribute-tag { font-size: 0.72rem; padding: 4px 10px; border-radius: 20px; background: var(--bg-soft); color: var(--text-secondary); }
 
   /* ---------- How it works ---------- */
   .how-section { padding: 90px 0; }
 
-  .section-label {
-    font-size: 0.78rem;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    color: var(--text-light);
-    margin-bottom: 14px;
-    display: block;
-  }
+  .section-label { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--text-light); margin-bottom: 14px; display: block; }
 
-  .how-section h2 {
-    font-family: var(--font-serif);
-    font-size: clamp(1.6rem, 3vw, 2.2rem);
-    font-weight: 500;
-    margin-bottom: 56px;
-    max-width: 480px;
-  }
+  .how-section h2 { font-family: var(--font-serif); font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 500; margin-bottom: 56px; max-width: 480px; }
 
   .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
-
   @media (max-width: 720px) { .steps { grid-template-columns: 1fr; gap: 24px; } }
 
   .step { position: relative; }
-
-  .step-num {
-    font-family: var(--font-serif);
-    font-size: 2.8rem;
-    font-weight: 400;
-    line-height: 1;
-    margin-bottom: 16px;
-    color: rgba(44, 40, 37, 0.08);
-  }
-
+  .step-num { font-family: var(--font-serif); font-size: 2.8rem; font-weight: 400; line-height: 1; margin-bottom: 16px; color: rgba(44, 40, 37, 0.08); }
   .step h3 { font-family: var(--font-serif); font-size: 1.15rem; font-weight: 500; margin-bottom: 10px; }
   .step p { font-size: 0.92rem; color: var(--text-secondary); }
 
   /* ---------- Example ---------- */
-  .example-section {
-    background: var(--bg-soft);
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
-    padding: 90px 0;
-  }
-
+  .example-section { background: var(--bg-soft); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 90px 0; }
   .example-inner { max-width: 960px; margin: 0 auto; padding: 0 28px; }
-
-  .example-inner h2 {
-    font-family: var(--font-serif);
-    font-size: clamp(1.6rem, 3vw, 2.2rem);
-    font-weight: 500;
-    margin-bottom: 14px;
-  }
-
+  .example-inner h2 { font-family: var(--font-serif); font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 500; margin-bottom: 14px; }
   .example-inner > p { color: var(--text-secondary); max-width: 580px; margin-bottom: 40px; font-size: 0.97rem; }
 
-  .example-card {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 8px 32px -16px rgba(44, 40, 37, 0.14);
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    min-height: 280px;
-  }
-
+  .example-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; box-shadow: 0 8px 32px -16px rgba(44, 40, 37, 0.14); display: grid; grid-template-columns: 1fr 1fr; min-height: 280px; }
   @media (max-width: 720px) { .example-card { grid-template-columns: 1fr; } }
 
-  .example-card-left {
-    background: linear-gradient(160deg, #C9B8AE 0%, #B5A399 100%);
-    padding: 36px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-  }
-
-  .example-card-left h3 {
-    font-family: var(--font-serif);
-    font-size: 1.6rem;
-    font-weight: 500;
-    color: white;
-    margin-bottom: 6px;
-    text-shadow: 0 1px 4px rgba(0,0,0,0.15);
-  }
-
+  .example-card-left { background: linear-gradient(160deg, #C9B8AE 0%, #B5A399 100%); padding: 36px; display: flex; flex-direction: column; justify-content: flex-end; }
+  .example-card-left h3 { font-family: var(--font-serif); font-size: 1.6rem; font-weight: 500; color: white; margin-bottom: 6px; text-shadow: 0 1px 4px rgba(0,0,0,0.15); }
   .example-card-left p { font-size: 0.85rem; color: rgba(255,255,255,0.75); }
 
   .example-card-right { padding: 36px; display: flex; flex-direction: column; justify-content: space-between; }
   .example-card-right p { font-size: 0.95rem; color: var(--text-secondary); font-style: italic; margin-bottom: 24px; }
 
   .example-features { list-style: none; margin-bottom: 28px; }
+  .example-features li { font-size: 0.88rem; color: var(--text-secondary); padding: 5px 0; display: flex; align-items: center; gap: 8px; }
+  .example-features li::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
 
-  .example-features li {
-    font-size: 0.88rem;
-    color: var(--text-secondary);
-    padding: 5px 0;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-
-  .example-features li::before {
-    content: '';
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: var(--accent);
-    flex-shrink: 0;
-  }
-
-  .example-link {
-    font-size: 0.88rem;
-    font-weight: 500;
-    color: var(--accent);
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    transition: gap 0.2s;
-  }
-
+  .example-link { font-size: 0.88rem; font-weight: 500; color: var(--accent); display: inline-flex; align-items: center; gap: 6px; transition: gap 0.2s; }
   .example-link:hover { gap: 10px; }
 
   /* ---------- Partners ---------- */
   .partners-section { padding: 90px 0; }
-
-  .partners-section h2 {
-    font-family: var(--font-serif);
-    font-size: clamp(1.6rem, 3vw, 2.2rem);
-    font-weight: 500;
-    margin-bottom: 14px;
-    max-width: 540px;
-  }
-
+  .partners-section h2 { font-family: var(--font-serif); font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 500; margin-bottom: 14px; max-width: 540px; }
   .partners-section > .container > p { color: var(--text-secondary); max-width: 580px; margin-bottom: 40px; font-size: 0.97rem; }
 
   .partner-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-
   @media (max-width: 720px) { .partner-cards { grid-template-columns: 1fr; } }
 
-  .partner-card {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 28px;
-    transition: border-color 0.2s;
-  }
-
+  .partner-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 28px; transition: border-color 0.2s; }
   .partner-card:hover { border-color: var(--accent); }
 
-  .partner-icon {
-    width: 36px;
-    height: 36px;
-    border-radius: 8px;
-    background: var(--accent-soft);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 16px;
-    font-size: 1rem;
-  }
-
+  .partner-icon { width: 36px; height: 36px; border-radius: 8px; background: var(--accent-soft); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; font-size: 1rem; }
   .partner-card h3 { font-family: var(--font-serif); font-size: 1.05rem; font-weight: 500; margin-bottom: 8px; }
   .partner-card p { font-size: 0.88rem; color: var(--text-secondary); }
 
   /* ---------- Contact ---------- */
-  .contact-section {
-    background: var(--bg-soft);
-    border-top: 1px solid var(--border);
-    padding: 90px 0;
-    text-align: center;
-  }
-
+  .contact-section { background: var(--bg-soft); border-top: 1px solid var(--border); padding: 90px 0; text-align: center; }
   .contact-inner { max-width: 580px; margin: 0 auto; padding: 0 28px; }
 
-  .contact-inner h2 {
-    font-family: var(--font-serif);
-    font-size: clamp(1.8rem, 3.5vw, 2.6rem);
-    font-weight: 500;
-    line-height: 1.2;
-    margin-bottom: 18px;
-  }
-
+  .contact-inner h2 { font-family: var(--font-serif); font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 500; line-height: 1.2; margin-bottom: 18px; }
   .contact-inner h2 em { font-style: italic; color: var(--rose); }
   .contact-inner > p { color: var(--text-secondary); margin-bottom: 36px; font-size: 0.97rem; }
 
   .contact-form { text-align: left; display: flex; flex-direction: column; gap: 16px; margin-bottom: 24px; }
 
   .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-
   @media (max-width: 560px) { .form-row { grid-template-columns: 1fr; } }
 
   .form-field { display: flex; flex-direction: column; gap: 6px; }
-
   .form-field label { font-size: 0.82rem; color: var(--text-secondary); font-weight: 500; letter-spacing: 0.02em; }
 
   .form-field input,
@@ -479,16 +264,14 @@
     width: 100%;
     resize: none;
   }
-
   .form-field input:focus,
   .form-field textarea:focus { outline: none; border-color: var(--accent); }
-
   .form-field input::placeholder,
   .form-field textarea::placeholder { color: var(--text-light); }
 
   .form-submit { width: 100%; padding: 14px; font-size: 0.97rem; }
 
-  .contact-note { font-size: 0.82rem; color: var(--text-light); font-style: italic; text-align: center; }
+  .contact-note { font-size: 0.82rem; color: var(--text-light); font-style: italic; text-align: center; margin-top: 16px; }
 
   .form-success {
     display: none;
@@ -518,15 +301,10 @@
     flex-wrap: wrap;
     gap: 8px;
   }
-
   .footer-logo { font-family: var(--font-serif); font-size: 0.95rem; color: var(--text-secondary); }
   .footer-logo em { font-style: italic; color: var(--rose); }
 
-  @media (prefers-reduced-motion: reduce) {
-    html { scroll-behavior: auto; }
-    * { transition: none !important; }
-  }
-
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
   a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 </style>
 </head>
@@ -681,20 +459,20 @@
         <div class="form-row">
           <div class="form-field">
             <label for="name">Your name</label>
-            <input type="text" id="name" placeholder="Jane Smith" autocomplete="name" />
+            <input type="text" id="name" name="name" placeholder="Jane Smith" autocomplete="name" />
           </div>
           <div class="form-field">
             <label for="email">Your email</label>
-            <input type="email" id="email" placeholder="jane@email.com" autocomplete="email" />
+            <input type="email" id="email" name="email" placeholder="jane@email.com" autocomplete="email" />
           </div>
         </div>
         <div class="form-field">
           <label for="lovedone">Who would you like to honor?</label>
-          <input type="text" id="lovedone" placeholder="Their name, and a little about them if you'd like" />
+          <input type="text" id="lovedone" name="lovedone" placeholder="Their name, and a little about them if you'd like" />
         </div>
         <div class="form-field">
           <label for="message">Anything else you'd like to share?</label>
-          <textarea id="message" rows="4" placeholder="No pressure — just share whatever feels right."></textarea>
+          <textarea id="message" name="message" rows="4" placeholder="No pressure — just share whatever feels right."></textarea>
         </div>
         <button class="btn-primary form-submit" onclick="submitForm()">Send us a message</button>
       </div>
@@ -711,7 +489,7 @@
 </footer>
 
 <script>
-  function submitForm() {
+  async function submitForm() {
     const name     = document.getElementById('name').value.trim();
     const email    = document.getElementById('email').value.trim();
     const lovedone = document.getElementById('lovedone').value.trim();
@@ -722,20 +500,30 @@
       return;
     }
 
-    const subject = encodeURIComponent('Tribute site inquiry — ' + (lovedone || 'a loved one'));
-    const body    = encodeURIComponent(
-      'Name: ' + name + '\n' +
-      'Email: ' + email + '\n\n' +
-      'Who they would like to honor:\n' + (lovedone || '(not specified)') + '\n\n' +
-      'Message:\n' + (message || '(none)')
-    );
+    const btn = document.querySelector('.form-submit');
+    btn.textContent = 'Sending…';
+    btn.disabled = true;
 
-    window.location.href = 'mailto:hello.lovinglyremembered@gmail.com?subject=' + subject + '&body=' + body;
+    try {
+      const response = await fetch('https://formspree.io/f/mwlkrbrg', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, lovedone, message })
+      });
 
-    setTimeout(function() {
-      document.getElementById('contactForm').style.display = 'none';
-      document.getElementById('formSuccess').style.display = 'block';
-    }, 800);
+      if (response.ok) {
+        document.getElementById('contactForm').style.display = 'none';
+        document.getElementById('formSuccess').style.display = 'block';
+      } else {
+        alert('Something went wrong. Please try again or email us directly at hello.lovinglyremembered@gmail.com');
+        btn.textContent = 'Send us a message';
+        btn.disabled = false;
+      }
+    } catch (err) {
+      alert('Something went wrong. Please try again or email us directly at hello.lovinglyremembered@gmail.com');
+      btn.textContent = 'Send us a message';
+      btn.disabled = false;
+    }
   }
 </script>
 
